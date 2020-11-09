@@ -1,7 +1,9 @@
 @extends('adminlte::page')
-
  @section('title','Home')
 @section('content_header')
+{{--  @section('plugins.Sweetalert2', true)  --}}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  
 
 @stop
 @section('content')
@@ -12,10 +14,11 @@
 </div>
 <div class="card-body">
 
-<p>Transactional Monitor System</p>
+<p>Transactional Monitor System </p>
 </div>
 
 </div>
+
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
@@ -28,7 +31,9 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 @section('js')
-<script>console.log('Funciona');</script>
+
+<script></<cript>
+
 @stop
 
 

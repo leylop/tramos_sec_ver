@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransactionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::resource(name:"transactions", controller:TransactionsController::class);
+Route::get('transactions/index', [TransactionsController::class, 'index'])->name('transactions');
+//Route::any('/transactions/index','TransactionsController@index');
+Route::get('transactions/graphs', [TransactionsController::class, 'list'])->name('graphs');
 
 Auth::routes();
 
