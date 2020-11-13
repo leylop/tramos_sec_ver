@@ -19,9 +19,10 @@ Route::get('/', function () {
 });
 
 //Route::resource(name:"transactions", controller:TransactionsController::class);
-Route::get('transactions/index', [TransactionsController::class, 'index'])->name('transactions');
+Route::any('transactions/index', [TransactionsController::class, 'index'])->name('transactions');
 //Route::any('/transactions/index','TransactionsController@index');
 Route::get('transactions/graphs', [TransactionsController::class, 'list'])->name('graphs');
+Route::any('transactions/TransactionsByDates', [TransactionsController::class, 'TransactionsByDates'])->name('TransactionsByDates');
 
 Auth::routes();
 
